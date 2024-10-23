@@ -1,72 +1,49 @@
 @import url("file:///home/matt/.cache/wal/colors-custom-gtk3.css");
 
-
 * {
-
-}
-
-#waybar {
-    background-color: @background;
-    border-radius: 10px;
-}
-
-#workspaces {
-    border-radius: 15px;
-    margin: 5px;
-    padding: 5px;
-    border: 1px solid white;
-    font-weight: bold;
+    border: none;
+    font-family: 'Hack Nerd Font';
     font-size: 16px;
-    color: white;
+    min-height: 45px;
+    border-radius: 10px;
+    color: @foreground;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+#custom-arch, #workspaces {
+    background-color: @background;
+    margin-top: 15px;
+    margin-right: 15px;
+    padding-top: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#custom-arch {
+    font-size: 20px;
+    margin-left: 15px;
+    min-width: 50px;
 }
 
 #workspaces button {
-    padding: 0px 5px;
-    border-radius: 15px;
-    min-width: 40px;
-    color: white;
-    transition: all 0.3s ease-in-out;
+    background-color: @background;
 }
 
-#workspaces button.active {
-    background: @color1;
-    min-width: 60px;
-    border-radius: 15px;
-    transition: all 0.3s ease-in-out;
+#clock, #pulseaudio, #network {
+    background-color: #11111b;
+    margin-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 15px;
 }
 
-#workspaces button:hover {
-    background: @color2;
+#pulseaudio, #network {
+    padding: 0px 20px;
 }
 
 #clock {
-    background-color: @background;
-    margin: 5px;
-    padding: 10px;
-    border-radius: 15px;
-    font-size: 16px;
-    color: white;
-    font-weight: bold;
-    border: 1px solid white;
-    min-width: 60px;
-}
-
-#custom-chatgpt, #window {
-    background-color: @background;
-    margin: 2px;
-    font-size: 14px;
-    color: white;
-    font-weight: bold;
-    min-width: 30px;
-}
-
-#network {
-    background-color: @background;
-    margin: 5px;
-    font-size: 14px;
-    color: white;
-    font-weight: bold;
-    padding: 0px 25px;
-    border-radius: 15px;
-    border: 1px solid white;
+    margin-right: 0;
 }

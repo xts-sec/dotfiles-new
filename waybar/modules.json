@@ -1,66 +1,38 @@
 {
+    "custom/arch": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "wlogout"
+    },
     "hyprland/workspaces": {
-        "format": "{icon} {windows}",
-        "window-rewrite-default": "",
-        "window-rewrite": {
-            "title<.*youtube.*>": "", 
-            "title<.*github.*>": "", 
-            "title<.*firefox.*>": "",
-            "kitty": "", 
-            "code": "󰨞",
-        },
+        "format": "{name}",
+        "format": "{icon}",
+        "tooltip": false,
+        "all-outputs": true,
+        "format-icons": {
+            "active": "",
+            "default": ""
+        }
     },
-
     "clock": {
-        "format": "{:%H:%M}  ",
-        "format-alt": "{:%A, %B %d, %Y (%R)}  ",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "calendar": {
-                    "mode"          : "year",
-                    "mode-mon-col"  : 3,
-                    "weeks-pos"     : "right",
-                    "on-scroll"     : 1,
-                    "format": {
-                              "months":     "<span color='#ffead3'><b>{}</b></span>",
-                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
-                              }
-                    },
-        "actions":  {
-                    "on-click-right": "mode",
-                    "on-scroll-up": "tz_up",
-                    "on-scroll-down": "tz_down",
-                    "on-scroll-up": "shift_up",
-                    "on-scroll-down": "shift_down"
-                    }
+        "format": "<span color='#b4befe'> </span>{:%H:%M %d/%m/%y}",
     },
-
-    "custom/chatgpt": {
-        "format": "󱜹",
-        "on-click": "firefox https://chatgpt.com/",
+    "pulseaudio": {
+        "format": "<span color='#b4befe'>{icon}</span> {volume}%",
+        "format-muted": "",
+        "tooltip": false,
+        "format-icons": {
+            "headphone": "",
+            "default": ["", "", "󰕾", "󰕾", "󰕾", "", "", ""]
+        },
+        "scroll-step": 1,
     },
-
     "network": {
         "interface": "wlan0",
         "format": "{ifname}",
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} 󰊗",
-        "format-disconnected": "", //An empty format will hide the module.
-        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
-        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-        "tooltip-format-ethernet": "{ifname} ",
-        "tooltip-format-disconnected": "Disconnected",
-        "max-length": 50
+        "format-wifi": "<span color='#b4befe'>  </span>{essid}",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-disconnected": "<span color='#b4befe'>󰖪 </span>No Network",
+        "tooltip": false,
     },
-
-    "hyprland/window": {
-        "format": "👉 {}",
-        "rewrite": {
-            "(.*) — Mozilla Firefox": "🌎 $1",
-            "(.*) - kitty": "> [$1]"
-        },
-        "separate-outputs": true
-    }
 }
