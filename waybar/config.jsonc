@@ -1,0 +1,32 @@
+{
+    // General Settings
+
+    "position": "top",
+    "layer": "top",
+    "margin-top": 15,
+    "margin-left": 15,
+    "margin-right": 15,
+    "reload_style_on_change": true,
+
+    // Load Modules
+    "include": [
+        "~/.config/waybar/modules.json"
+    ],
+
+    // Modules Left
+    "modules-left": [
+        "hyprland/window"
+    ],
+
+    // Modules Center
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+
+    // Modules Right    
+    "modules-right": [
+        "network",
+        "custom/chatgpt",
+        "clock"
+    ]
+}
